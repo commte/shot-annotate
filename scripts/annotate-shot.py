@@ -18,10 +18,11 @@
 
   --box   x,y,w,h        枠
   --arrow x1,y1,x2,y2    矢印（x1,y1 から x2,y2 へ）
+  --line  x1,y1,x2,y2    線。斜めに引いて「ここは消す」を示すときに使う
   --label x,y,text       注釈の文字（x,y は左上）。text の中の \\n で改行
   --color red|green      これ以降の色。既定は red
 
---box / --arrow / --label / --color は何度でも書ける。書いた順に描かれる。
+--box / --arrow / --line / --label / --color は何度でも書ける。書いた順に描かれる。
 
 必要なもの
   python3 と Pillow（pip install pillow）
@@ -96,7 +97,7 @@ def main():
     ap.add_argument("--scale", type=float, default=1.0, help="線の太さと文字の倍率")
     ap.add_argument("--font", help="フォントファイルのパス")
     ap.set_defaults(ops=None)
-    for opt in ("--box", "--arrow", "--label", "--color"):
+    for opt in ("--box", "--arrow", "--line", "--label", "--color"):
         ap.add_argument(opt, action=Collect, dest="_ignored", metavar="…")
     ns = ap.parse_args()
     ops = ns.ops or []
@@ -141,6 +142,9 @@ def main():
             x, y, w, h = to_x(x), to_y(y), to_x(w), to_y(h)
             dr.rounded_rectangle([x, y, x + w, y + h], radius=round(6 * unit),
                                  outline=color, width=width)
+        elif kind == "line":
+            x1, y1, x2, y2 = nums(value, 4, "line")
+            dr.line([to_x(x1), to_y(y1), to_x(x2), to_y(y2)], fill=color, width=width)
         elif kind == "arrow":
             x1, y1, x2, y2 = nums(value, 4, "arrow")
             x1, y1, x2, y2 = to_x(x1), to_y(y1), to_x(x2), to_y(y2)
