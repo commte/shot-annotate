@@ -6,13 +6,13 @@
 画像を貼っただけでは、見る人はどこを見ればいいのか分からない。
 説明を口で補うか、キャプションを読ませることになる。どちらも相手の負担が増える。
 
-![注釈を入れた例](examples/after.png)
+![注釈を入れた例](examples/annotated.png)
 
 ```bash
-python3 scripts/annotate-shot.py --in before.png --out after.png --px \
+python3 scripts/annotate-shot.py --in before.png --out annotated.png --px \
   --box     112,166,740,100 --arrow 470,140,566,164 --label 296,110,"タイトルを変更" \
   --box     112,282,420,200 --arrow 700,382,548,382 --label 716,370,"画像を入れる" \
-  --ellipse 106,500,280,48  --label 410,506,"取る" \
+  --ellipse 106,500,280,48  --label 410,506,"トル" \
   --line    118,641,842,641 --line 118,677,478,677
 ```
 
