@@ -6,20 +6,14 @@
 画像を貼っただけでは、見る人はどこを見ればいいのか分からない。
 説明を口で補うか、キャプションを読ませることになる。どちらも相手の負担が増える。
 
-| 元の画像 | 注釈を入れたもの |
-| --- | --- |
-| ![before](examples/before.png) | ![after](examples/after.png) |
+![注釈を入れた例](examples/after.png)
 
 ```bash
-python3 scripts/annotate-shot.py \
-  --in  before.png --out after.png --px \
-  --box   112,166,740,100 \
-  --arrow 470,140,566,164 \
-  --label 296,110,"タイトルを変更" \
-  --box   112,282,420,200 \
-  --arrow 700,382,548,382 \
-  --label 716,370,"画像を入れる" \
-  --line  112,516,856,632
+python3 scripts/annotate-shot.py --in before.png --out after.png --px \
+  --box     112,166,740,100 --arrow 470,140,566,164 --label 296,110,"タイトルを変更" \
+  --box     112,282,420,200 --arrow 700,382,548,382 --label 716,370,"画像を入れる" \
+  --ellipse 106,500,280,48  --label 410,506,"取る" \
+  --line    118,641,842,641 --line 118,677,478,677
 ```
 
 ## 入れる
@@ -46,6 +40,7 @@ pip install pillow
 | 指定 | 意味 |
 | --- | --- |
 | `--box x,y,w,h` | 枠 |
+| `--ellipse x,y,w,h` | 丸。1語や見出しを囲む |
 | `--arrow x1,y1,x2,y2` | 矢印（x1,y1 から x2,y2 へ） |
 | `--line x1,y1,x2,y2` | 線。斜めに引いて「ここは消す」を示す |
 | `--label x,y,text` | 注釈の文字。`\n` で改行 |
@@ -54,7 +49,7 @@ pip install pillow
 | `--scale` | 線の太さと文字の倍率 |
 | `--font` | フォントファイルのパス |
 
-`--box` `--arrow` `--line` `--label` `--color` は何度でも書ける。書いた順に描かれる。
+`--box` `--ellipse` `--arrow` `--line` `--label` `--color` は何度でも書ける。書いた順に描かれる。
 
 線の太さと文字の大きさは画像の幅から決まる（幅2880pxで線8px・文字44px）。
 画像の大きさが違っても見た目が揃うので、案件をまたいでも同じ絵になる。
