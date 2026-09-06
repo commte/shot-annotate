@@ -1,0 +1,58 @@
+<!doctype html><meta charset="utf-8">
+<title>サンプルページ</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:#1A1A1A;
+       font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif}
+  header{display:flex;align-items:center;gap:34px;padding:20px 40px;border-bottom:1px solid #ECECEC}
+  .logo{font-size:22px;font-weight:800;letter-spacing:.04em;color:#2B6CB0}
+  nav{display:flex;gap:26px;font-size:15px;color:#444}
+  nav .on{color:#2B6CB0;font-weight:700}
+  .btn{margin-left:auto;border:2px solid #2B6CB0;color:#2B6CB0;border-radius:999px;
+       padding:10px 22px;font-size:14px;font-weight:700}
+  main{display:grid;grid-template-columns:1fr 320px;gap:56px;max-width:1240px;margin:0 auto;padding:40px}
+  .meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+  .cat{border:1.5px solid #2B6CB0;color:#2B6CB0;border-radius:6px;padding:5px 14px;font-size:14px}
+  .date{font-size:15px;color:#767676;letter-spacing:.08em}
+  h1{font-size:34px;line-height:1.5;margin:0 0 26px}
+  .hero{width:100%;height:210px;border-radius:12px;
+        background:linear-gradient(120deg,#DCE9F7,#EFF4F9 60%,#E4EDF6)}
+  h2{font-size:22px;margin:34px 0 14px;color:#2B6CB0}
+  p{font-size:16px;line-height:2;margin:0 0 18px;color:#1A1A1A}
+  aside .card{background:#F4F7FB;border-radius:12px;padding:22px;margin-bottom:20px}
+  aside h3{font-size:16px;margin:0 0 10px}
+  aside p{font-size:14px;line-height:1.8;margin:0 0 14px;color:#444}
+  aside .cta{display:block;background:#2B6CB0;color:#fff;text-align:center;border-radius:8px;
+             padding:12px;font-size:14px;font-weight:700;text-decoration:none}
+  footer{margin-top:40px;padding:26px 40px;background:#F7F7F7;font-size:14px;color:#444}
+</style>
+<header>
+  <div class="logo">SAMPLE</div>
+  <nav><span>サービス</span><span>導入事例</span><span class="on">お役立ち記事</span><span>会社情報</span></nav>
+  <div class="btn">お問い合わせ</div>
+</header>
+<main>
+  <article>
+    <div class="meta"><span class="cat">お役立ち記事</span><span class="date">2026/03/12</span></div>
+    <h1>在庫管理をエクセルから移行するときに、最初に決めておくこと</h1>
+    <div class="hero"></div>
+    <h2>移行がうまくいかない理由</h2>
+    <p>エクセルでの在庫管理は、担当者ごとにファイルが分かれていくことが多くあります。同じ品番が別の表記で登録され、月末の棚卸しで数が合わなくなります。</p>
+    <p>移行の前に、品番の付け方と単位の持ち方を1つに決めておく必要があります。ここを決めずにデータを入れ替えると、新しい仕組みの中で同じことが起きます。</p>
+    <h2>決めておくこと</h2>
+    <p>品番の桁数と使ってよい記号、入り数の単位、拠点をまたぐときの持ち主の扱い。この3点が決まっていれば、移行の作業そのものは1週間で終わります。</p>
+  </article>
+  <aside>
+    <div class="card">
+      <h3>お役立ち資料</h3>
+      <p>在庫管理の移行チェックリストを無料で配布しています。</p>
+      <a class="cta">資料を見てみる</a>
+    </div>
+    <div class="card">
+      <h3>導入事例を読む</h3>
+      <p>製造業・卸売業での導入事例を公開中です。</p>
+      <a class="cta">事例を見てみる</a>
+    </div>
+  </aside>
+</main>
+<footer>© SAMPLE Inc. これはツールの説明のために作った架空のページです</footer>
