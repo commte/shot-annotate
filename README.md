@@ -6,13 +6,13 @@
 画像を貼っただけでは、見る人はどこを見ればいいのか分からない。
 説明を口で補うか、キャプションを読ませることになる。どちらも相手の負担が増える。
 
-記事の修正指示
-
-![記事の修正指示](examples/annotated-article.png)
-
 管理画面の修正指示
 
 ![管理画面の修正指示](examples/annotated-admin.png)
+
+記事の修正指示
+
+![記事の修正指示](examples/annotated-article.png)
 
 コードレビュー
 
