@@ -1,6 +1,7 @@
 # shot-annotate
 
-スクリーンショットに赤枠・矢印・注釈を重ねる Claude Code / Claude Agent SDK 用のスキル。
+スクリーンショットに赤枠・矢印・注釈を重ねる Agent Skills 形式のスキル。
+Claude Code / Codex / Cursor などから呼べる。
 修正指示にも、不具合の指摘にも使う。
 
 画像を貼っただけでは、見る人はどこを見ればいいのか分からない。
