@@ -23,7 +23,7 @@ description: >
 
 ```
 python3 .claude/skills/shot-annotate/scripts/annotate-shot.py \
-  --in before.png --out annotated.png --px \
+  --in before-article.png --out annotated-article.png --px \
   --box     112,166,740,100 --arrow 470,140,566,164 --label 296,110,"タイトルを変更" \
   --box     112,282,420,200 --arrow 700,382,548,382 --label 716,370,"画像を入れる" \
   --ellipse 106,500,280,48  --label 410,506,"トル" \

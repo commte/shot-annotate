@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8">
+<title>サンプルコード</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#1B1D23;color:#D6DAE3;
+       font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+  .win{width:1300px}
+  .bar{display:flex;align-items:center;gap:9px;padding:13px 18px;background:#15171C;border-bottom:1px solid #262A33}
+  .dot{width:12px;height:12px;border-radius:99px}
+  .tab{margin-left:20px;background:#1B1D23;border-radius:7px 7px 0 0;padding:9px 20px;font-size:15px;color:#AEB6C4}
+  .tab b{font-weight:700;color:#EDF1F7}
+  .code{padding:26px 0 34px;font-family:Menlo,Monaco,"SF Mono",monospace;font-size:20px;line-height:2.05}
+  .ln{display:flex}
+  .no{width:78px;text-align:right;padding-right:28px;color:#565D6B;flex:none}
+  .kw{color:#C88CE8}.fn{color:#7FB2E5}.st{color:#9CCF8A}.cm{color:#6E7480}.va{color:#E6C07B}
+</style>
+<div class="win">
+  <div class="bar">
+    <span class="dot" style="background:#E0665C"></span>
+    <span class="dot" style="background:#E0B45C"></span>
+    <span class="dot" style="background:#5CB37A"></span>
+    <span class="tab">src/lib/<b>user.ts</b></span>
+  </div>
+  <div class="code">
+<div class="ln"><span class="no">12</span><span><span class="kw">export async function</span> <span class="fn">fetchUser</span>(<span class="va">id</span>: <span class="kw">string</span>) {</span></div>
+<div class="ln"><span class="no">13</span><span>&nbsp;&nbsp;<span class="kw">const</span> res = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="st">`/api/users/${id}`</span>)</span></div>
+<div class="ln"><span class="no">14</span><span>&nbsp;&nbsp;<span class="kw">const</span> json = <span class="kw">await</span> res.<span class="fn">json</span>()</span></div>
+<div class="ln"><span class="no">15</span><span>&nbsp;&nbsp;<span class="fn">console</span>.<span class="fn">log</span>(<span class="st">'user'</span>, json)</span></div>
+<div class="ln"><span class="no">16</span><span>&nbsp;&nbsp;<span class="kw">return</span> json.data.name</span></div>
+<div class="ln"><span class="no">17</span><span>}</span></div>
+<div class="ln"><span class="no">18</span><span>&nbsp;</span></div>
+<div class="ln"><span class="no">19</span><span><span class="cm">// TODO: あとで消す</span></span></div>
+<div class="ln"><span class="no">20</span><span><span class="kw">export const</span> <span class="va">RETRY</span> = <span class="va">3</span></span></div>
+  </div>
+</div>

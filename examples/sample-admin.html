@@ -1,0 +1,62 @@
+<!doctype html><meta charset="utf-8">
+<title>サンプル管理画面</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#F4F6F9;color:#1A1A1A;
+       font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;font-size:15px}
+  .app{display:grid;grid-template-columns:220px 1fr;min-height:820px}
+  aside{background:#1E2430;color:#C8D0DE;padding:22px 0}
+  aside .brand{font-size:18px;font-weight:800;color:#fff;padding:0 22px 22px;letter-spacing:.04em}
+  aside a{display:block;padding:11px 22px;color:#C8D0DE;text-decoration:none;font-size:15px}
+  aside a.on{background:#2B3444;color:#fff;font-weight:700;border-left:3px solid #4C8DF6;padding-left:19px}
+  main{padding:26px 30px}
+  .head{display:flex;align-items:center;margin-bottom:20px}
+  h1{font-size:22px;margin:0}
+  .btn{margin-left:auto;background:#2B62D9;color:#fff;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:700}
+  .tools{display:flex;gap:10px;margin-bottom:18px}
+  .inp{background:#fff;border:1px solid #D8DEE7;border-radius:8px;padding:9px 14px;font-size:14px;color:#6B7280;width:280px}
+  .sel{background:#fff;border:1px solid #D8DEE7;border-radius:8px;padding:9px 14px;font-size:14px;color:#6B7280}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}
+  th,td{text-align:left;padding:14px 16px;font-size:15px;border-bottom:1px solid #EDF0F4}
+  th{background:#FAFBFD;font-size:14px;color:#4B5563;font-weight:700}
+  tr:last-child td{border-bottom:none}
+  .del{color:#C4382A}
+  .edit{color:#2B62D9;margin-right:14px}
+  .pg{display:flex;gap:8px;margin-top:18px;justify-content:flex-end;color:#6B7280;font-size:14px}
+  .pg b{background:#2B62D9;color:#fff;border-radius:6px;padding:5px 11px}
+  .pg span{padding:5px 11px}
+</style>
+<div class="app">
+  <aside>
+    <div class="brand">SAMPLE Admin</div>
+    <a>ダッシュボード</a>
+    <a class="on">ユーザー</a>
+    <a>注文</a>
+    <a>在庫</a>
+    <a>レポート</a>
+    <a>設定</a>
+  </aside>
+  <main>
+    <div class="head">
+      <h1>ユーザー</h1>
+      <div class="btn">新規登録</div>
+    </div>
+    <div class="tools">
+      <div class="inp">名前・メールで検索</div>
+      <div class="sel">すべての状態</div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>ID</th><th>名前</th><th>メール</th><th>状態</th><th>登録日</th><th>最終ログイン</th><th>操作</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1042</td><td>田中 一郎</td><td>tanaka@example.com</td><td>有効</td><td>2026/3/1</td><td>2026-03-11 09:12</td><td><span class="edit">編集</span><span class="del">削除</span></td></tr>
+        <tr><td>1043</td><td>佐藤 花子</td><td>sato@example.com</td><td>停止</td><td>2026-03-05</td><td>2026-02-28 18:40</td><td><span class="edit">編集</span><span class="del">削除</span></td></tr>
+        <tr><td>1044</td><td>鈴木 次郎</td><td>suzuki@example.com</td><td>有効</td><td>3/8/2026</td><td>2026-03-12 07:05</td><td><span class="edit">編集</span><span class="del">削除</span></td></tr>
+        <tr><td>1045</td><td>高橋 三郎</td><td>takahashi@example.com</td><td>招待中</td><td>2026-03-09</td><td>—</td><td><span class="edit">編集</span><span class="del">削除</span></td></tr>
+        <tr><td>1046</td><td>伊藤 四郎</td><td>ito@example.com</td><td>有効</td><td>2026/3/10</td><td>2026-03-12 11:33</td><td><span class="edit">編集</span><span class="del">削除</span></td></tr>
+      </tbody>
+    </table>
+    <div class="pg"><span>前へ</span><b>1</b><span>2</span><span>3</span><span>次へ</span></div>
+  </main>
+</div>
