@@ -94,7 +94,7 @@ def main():
     ap = argparse.ArgumentParser(add_help=True)
     ap.add_argument("--in", dest="src", required=True, help="元の画像")
     ap.add_argument("--out", dest="dst", required=True, help="書き出す画像")
-    ap.add_argument("--px", action="store_true", help="座標を % ではなく実寸ピクセルで読む")
+    ap.add_argument("--px", action="store_true", help="座標を %% ではなく実寸ピクセルで読む")
     ap.add_argument("--scale", type=float, default=1.0, help="線の太さと文字の倍率")
     ap.add_argument("--font", help="フォントファイルのパス")
     ap.set_defaults(ops=None)
